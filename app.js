@@ -146,6 +146,12 @@ function main() {
         } else {
             console.log("Parking lot not available, Please create it first")
         }
+        const data = fs.readFileSync(outputFile, 'utf-8');
+        const dataAsList = data.split("\n")
+        console.log("Reading Output.txt")
+        for (let i in dataAsList) {
+            console.log(dataAsList[i])
+        }
 
     } catch (error) {
         console.error("Got Error : " + error)
